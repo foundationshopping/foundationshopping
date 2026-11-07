@@ -1,0 +1,17 @@
+json
+{
+  "short_name": "Foundation",
+  "name": "Foundation Shopping - God with us",
+  "icons": [
+    {
+      "src": "c60d6273d7774325b9e3ff08882bf3ed.jpg",
+      "type": "image/jpeg",
+      "sizes": "1024x1024"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#E3F2FD",
+  "theme_color": "#1E3A8A",
+  "display": "standalone",
+  "orientation": "portrait"
+}
