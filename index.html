@@ -6,39 +6,162 @@ html
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>基础购物网站</title>
     <style>
-        /* 简单好用的基础样式 */
+        /* 全局基础样式 */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f4f6f9;
+            color: #333;
         }
 
+        /* 顶部页眉 */
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #ffffff;
             padding: 1rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
-        /* 页面居中容器 */
+        /* 页面核心居中容器 */
         .container {
-            max-width: 1200px;
-            margin: 2rem auto;
+            max-width: 600px;
+            margin: 1.5rem auto;
             padding: 0 1rem;
+        }
+
+        /* 商户阶段卡片样式 */
+        .card {
+            background: #ffffff;
+            border-left: 5px solid #0052cc;
+            border-radius: 4px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #0052cc;
+        }
+
+        /* 提示说明框 */
+        .notice-box {
+            background-color: #fffdf0;
+            border: 1px solid #ffeeba;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        /* 核心“申请加入”大按钮：点击跳转到下方的任务区 */
+        .btn-apply {
+            display: block;
+            width: 100%;
+            background-color: #0052cc;
+            color: #ffffff;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            box-shadow: 0 4px 6px rgba(0, 82, 204, 0.2);
+            transition: background 0.2s;
+        }
+
+        .btn-apply:hover {
+            background-color: #0040a3;
+        }
+
+        /* 下方的各项任务独立区域 */
+        .tasks-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px dashed #ccc;
+        }
+
+        .task-item {
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border: 1px solid #e1e4e8;
+        }
+
+        .task-status {
+            display: inline-block;
+            background: #e2f0d9;
+            color: #385723;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.8rem;
+            border-radius: 4px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>基础购物网站</h1>
+        <h2>举信仰的定海神针</h2>
     </header>
 
     <main class="container">
-        <p>欢迎来到我的购物网站！</p>
-        <!-- 之后你的商品列表和内容都可以写在这里 -->
+
+        <!-- 阶段一卡片 -->
+        <div class="card">
+            <h3>🥇 阶段一：全球先锋商户（限额 1 - 30 名）</h3>
+            <p>享半年（6个月）完全免除平台月租费与交易佣金，优先获得首页核心流量扶持。</p>
+        </div>
+
+        <!-- 阶段二卡片 -->
+        <div class="card">
+            <h3>🥈 阶段二：全球黄金商户（限额 31 - 100 名）</h3>
+            <p>享三个月（3个月）完全免除平台月租费与交易佣金，轻松开拓跨国全新销路。</p>
+        </div>
+
+        <!-- 承诺框 -->
+        <div class="notice-box">
+            <h4>🤝 2% 联名公益基金承诺：</h4>
+            <p>本平台将全自动代扣各商家总销售额的 2% 作为公益基金。此笔款项将在年底**完全以各入驻商家的名义与联合签名**正式捐赠给全球合规慈善机构，为您的企业树立崇高的社会形象。</p>
+            <small style="color: #666;">* 註：本平台严格禁止上架涉及祭偶像、赌博、色情及任何违反法律法规的商品，确保平台生态的圣洁与纯净。</small>
+        </div>
+
+        <!-- 修改后的核心按钮：通过 #my-tasks 锚点直接在站内向下跳转 -->
+        <a href="#my-tasks" class="btn-apply">
+            APPLY FOR PIONEER SLOT / 申请加入
+        </a>
+
+        <!-- =================================================== -->
+        <!-- 这是你要求的站内任务区，点击上面的按钮会自动滚到这里 -->
+        <!-- =================================================== -->
+        <section id="my-tasks" class="tasks-section">
+            <h3 style="text-align: center; margin-bottom: 1.5rem;">📋 foundationshopping 各项任务列表</h3>
+            
+            <div class="task-item">
+                <span class="task-status">进行中</span>
+                <h4>任务 1：完善商户入驻基本资料</h4>
+                <p>请点击填写您的基础店铺信息，以便开通先锋商户权限。</p>
+            </div>
+
+            <div class="task-item">
+                <span class="task-status">未解锁</span>
+                <h4>任务 2：绑定您的自定义域名</h4>
+                <p>通过 CNAME 解析将您自己的独有域名绑定至本平台。</p>
+            </div>
+
+            <div class="task-item">
+                <span class="task-status">未解锁</span>
+                <h4>任务 3：上架首批合规商品</h4>
+                <p>上传符合平台圣洁、纯净生态要求的首款展示商品。</p>
+            </div>
+        </section>
+
     </main>
+
+    <footer style="text-align: center; color: #999; padding: 2rem 0; font-size: 0.9rem;">
+        &copy; 2026 foundationshopping.com 版权所有
+    </footer>
 
 </body>
 </html>
