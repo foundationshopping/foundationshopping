@@ -22,47 +22,23 @@ html
             text-align: center;
         }
 
-        /* 🌟 1:1 完美复刻的天蓝色圆角卡片横幅 🌟 */
-        .banner-card {
-            background-color: #8cd0f3;
-            border-radius: 16px;
-            padding: 2.5rem 1rem;
+        /* 🌟 完美加载你的原版弧形字商标 🌟 */
+        .banner-logo-container {
             max-width: 500px;
             margin: 0 auto;
+            background-color: #8cd0f3; /* 保持边缘色调一致 */
+            border-radius: 16px;
+            overflow: hidden;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
 
-        /* 棕色优雅十字架 */
-        .cross {
-            font-size: 4rem;
-            color: #5c3a21; /* 经典木棕色 */
-            line-height: 1;
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-        }
-
-        /* 弧形感/优雅的 God with us */
-        .god-with-us {
-            font-family: 'Georgia', serif;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #111111;
-            margin-bottom: 0.5rem;
-            letter-spacing: 0.5px;
-        }
-
-        /* 加粗放大的核心品牌名 */
-        .banner-title {
-            font-family: 'Times New Roman', Times, serif;
-            font-size: 2.4rem;
-            font-weight: 900;
-            color: #051923;
-            line-height: 1.1;
-            margin: 0;
+        .banner-logo-container img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         /* 页面核心居中内容容器 */
@@ -122,7 +98,7 @@ html
             text-align: left;
         }
 
-        /* 核心“申请加入”大按钮：点击跳转到下方的任务区 */
+        /* 核心“申请加入”大按钮 */
         .btn-apply {
             display: block;
             width: 100%;
@@ -167,12 +143,10 @@ html
 </head>
 <body>
 
-    <!-- 🌟 顶部栏完美复刻：天蓝色大卡片 + 棕色十字架 + 环绕文字 🌟 -->
+    <!-- 🌟 顶部栏完美切换为：直接调用您上传的官方高清晰弧形商标图 🌟 -->
     <div class="header-wrapper">
-        <div class="banner-card">
-            <div class="cross">†</div>
-            <div class="god-with-us">God with us</div>
-            <h1 class="banner-title">Foundation<br>Shopping</h1>
+        <div class="banner-logo-container">
+            <img src="logo.jpg" alt="Foundation Shopping Logo">
         </div>
     </div>
 
@@ -205,7 +179,7 @@ html
             <small style="color: #666;">* 註：本平台严格禁止上架涉及祭偶像、赌博、色情及任何违反法律法规的商品，确保平台生态的圣洁与纯净。</small>
         </div>
 
-        <!-- 核心按钮：点击直接在站内滑动到下方任务 -->
+        <!-- 核心按钮 -->
         <a href="#my-tasks" class="btn-apply">
             APPLY FOR PIONEER SLOT / 申请加入
         </a>
